@@ -1,0 +1,111 @@
+{
+    "guidAssignments": {
+        "-100": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+        "-110": "c398e476-ed9e-4470-bd2d-ccbaa1b003d5",
+        "-111": "6e1475b3-4aaa-42c4-b0a5-eaa8e26beb9c",
+        "-1479037219173": "8eac1ca7-b700-4f75-8c35-aef5fd7e52b7",
+        "-1479037219179": "54667a19-4dfe-4f6b-ac5a-16cc90b3be7d",
+        "-1479037219182": "cf156046-735f-4ded-ba87-1d2cd5240fda",
+        "-500": "c6697345-9ba6-4a38-a11b-05ff5880e698",
+        "-501": "851d5dbd-cc4a-470c-870f-fcc8095902a5",
+        "-502": "9bd890cc-231c-45ee-b601-e5d32b1a8b14",
+        "-503": "63ad9a6a-99b4-465b-a3d7-6ffd7e11c77c",
+        "-504": "b3a5e008-e7b9-44d5-ae84-95ee96c5af0f"
+    },
+    "mutatedEntities": {
+        "CREATE": [
+            {
+                "attributes": {
+                    "directory": "/landingzone/reuters/news",
+                    "file_name_pattern": "news_from_reuters_DDMMYYY",
+                    "qualifiedName": "news_from_reuters"
+                },
+                "guid": "8eac1ca7-b700-4f75-8c35-aef5fd7e52b7",
+                "typeName": "DataFile"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic.id"
+                },
+                "guid": "c6697345-9ba6-4a38-a11b-05ff5880e698",
+                "typeName": "kafka_value_message_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic.scrap_time"
+                },
+                "guid": "851d5dbd-cc4a-470c-870f-fcc8095902a5",
+                "typeName": "kafka_value_message_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic.url"
+                },
+                "guid": "9bd890cc-231c-45ee-b601-e5d32b1a8b14",
+                "typeName": "kafka_value_message_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic.headline"
+                },
+                "guid": "63ad9a6a-99b4-465b-a3d7-6ffd7e11c77c",
+                "typeName": "kafka_value_message_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic.content"
+                },
+                "guid": "b3a5e008-e7b9-44d5-ae84-95ee96c5af0f",
+                "typeName": "kafka_value_message_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news_topic"
+                },
+                "guid": "54667a19-4dfe-4f6b-ac5a-16cc90b3be7d",
+                "typeName": "kafka_topic_and_schema"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news:news_from_reuters"
+                },
+                "guid": "c398e476-ed9e-4470-bd2d-ccbaa1b003d5",
+                "typeName": "hbase_table"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news:news_from_reuters.z"
+                },
+                "guid": "6e1475b3-4aaa-42c4-b0a5-eaa8e26beb9c",
+                "typeName": "hbase_column_family"
+            },
+            {
+                "attributes": {
+                    "qualifiedName": "news:news_from_reuters.z.message"
+                },
+                "guid": "cf156046-735f-4ded-ba87-1d2cd5240fda",
+                "typeName": "hbase_column"
+            }
+        ],
+        "UPDATE": [
+            {
+                "attributes": {
+                    "dns_name": "pluto",
+                    "ip_address": "10.71.68.93",
+                    "name": "landing_zone_server_1",
+                    "qualifiedName": "landing_zone_server_1@dev"
+                },
+                "classificationNames": [
+                    "edge_node",
+                    "landing_zone_incoming"
+                ],
+                "displayText": "landing_zone_server_1",
+                "guid": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+                "meaningNames": [],
+                "meanings": [],
+                "status": "ACTIVE",
+                "typeName": "server"
+            }
+        ]
+    }
+}

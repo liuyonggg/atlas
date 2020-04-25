@@ -1,0 +1,108 @@
+{
+    "guidAssignments": {
+        "-100": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+        "-1479037219223": "8a382592-49bb-4ca6-8e97-9998044db381",
+        "-1479037219224": "7f54d4b4-e8c2-4cd9-b46b-9c886160566f",
+        "-200": "98ccacd7-8295-41a3-a5f1-17f81c0806e3",
+        "-400": "54667a19-4dfe-4f6b-ac5a-16cc90b3be7d",
+        "-500": "6e1475b3-4aaa-42c4-b0a5-eaa8e26beb9c",
+        "-600": "c398e476-ed9e-4470-bd2d-ccbaa1b003d5",
+        "-700": "8eac1ca7-b700-4f75-8c35-aef5fd7e52b7"
+    },
+    "mutatedEntities": {
+        "CREATE": [
+            {
+                "attributes": {
+                    "qualifiedName": "news_from_reuters:to:news_topic",
+                    "run_user": "ingestor_user_news",
+                    "server": {
+                        "guid": "-100",
+                        "typeName": "server"
+                    }
+                },
+                "guid": "8a382592-49bb-4ca6-8e97-9998044db381",
+                "typeName": "python_script"
+            },
+            {
+                "attributes": {
+                    "id": "news_topic:to:news_from_reuters.z",
+                    "qualifiedName": "news_topic:to:news_from_reuters.z"
+                },
+                "guid": "7f54d4b4-e8c2-4cd9-b46b-9c886160566f",
+                "typeName": "storm_topology"
+            },
+            {
+                "guid": "98ccacd7-8295-41a3-a5f1-17f81c0806e3",
+                "typeName": "storm_node"
+            }
+        ],
+        "UPDATE": [
+            {
+                "attributes": {
+                    "description": "Topics on to news from different websites are injected",
+                    "name": "news_topic",
+                    "owner": "ingestors_news",
+                    "qualifiedName": "news_topic"
+                },
+                "classificationNames": [
+                    "news"
+                ],
+                "displayText": "news_topic",
+                "guid": "54667a19-4dfe-4f6b-ac5a-16cc90b3be7d",
+                "meaningNames": [],
+                "meanings": [],
+                "status": "ACTIVE",
+                "typeName": "kafka_topic_and_schema"
+            },
+            {
+                "attributes": {
+                    "createTime": 0,
+                    "name": "z",
+                    "qualifiedName": "news:news_from_reuters.z"
+                },
+                "classificationNames": [],
+                "displayText": "z",
+                "guid": "6e1475b3-4aaa-42c4-b0a5-eaa8e26beb9c",
+                "meaningNames": [],
+                "meanings": [],
+                "status": "ACTIVE",
+                "typeName": "hbase_column_family"
+            },
+            {
+                "attributes": {
+                    "directory": "/landingzone/reuters/news",
+                    "file_name_pattern": "news_from_reuters_DDMMYYY",
+                    "name": "news_from_reuters",
+                    "qualifiedName": "news_from_reuters"
+                },
+                "classificationNames": [
+                    "news"
+                ],
+                "displayText": "news_from_reuters",
+                "guid": "8eac1ca7-b700-4f75-8c35-aef5fd7e52b7",
+                "meaningNames": [],
+                "meanings": [],
+                "status": "ACTIVE",
+                "typeName": "DataFile"
+            },
+            {
+                "attributes": {
+                    "dns_name": "pluto",
+                    "ip_address": "10.71.68.93",
+                    "name": "landing_zone_server_1",
+                    "qualifiedName": "landing_zone_server_1@dev"
+                },
+                "classificationNames": [
+                    "edge_node",
+                    "landing_zone_incoming"
+                ],
+                "displayText": "landing_zone_server_1",
+                "guid": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+                "meaningNames": [],
+                "meanings": [],
+                "status": "ACTIVE",
+                "typeName": "server"
+            }
+        ]
+    }
+}

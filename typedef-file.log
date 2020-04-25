@@ -1,0 +1,292 @@
+{
+    "classificationDefs": [
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1587855764292,
+            "createdBy": "admin",
+            "description": "Used for classifying a news type of feed",
+            "entityTypes": [],
+            "guid": "1ec1bb76-7ad0-4ced-9d32-1f7e2d12608e",
+            "name": "news",
+            "subTypes": [],
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1587855764292,
+            "updatedBy": "admin",
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1587855764297,
+            "createdBy": "admin",
+            "description": "Used for classifying a data which contains customer personal information, hence indicating confidential private",
+            "entityTypes": [],
+            "guid": "6311b68b-71a6-4bd2-8ad6-a2b25c1f7574",
+            "name": "customer_PII",
+            "subTypes": [],
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1587855764297,
+            "updatedBy": "admin",
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1587855764302,
+            "createdBy": "admin",
+            "description": "Used for classifying a data which contains customer non personal information, hence indicating confidential lesser than private",
+            "entityTypes": [],
+            "guid": "f87fe2a1-00ed-490d-aa68-1ba3a20d063d",
+            "name": "customer_NON_PII",
+            "subTypes": [],
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1587855764302,
+            "updatedBy": "admin",
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1587855764307,
+            "createdBy": "admin",
+            "description": "Used for classifying a data which contains data obtained from social media like facebook, twitter",
+            "entityTypes": [],
+            "guid": "3aaafcc5-f407-4ce6-b083-e86397262853",
+            "name": "social",
+            "subTypes": [],
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1587855764307,
+            "updatedBy": "admin",
+            "version": 1
+        }
+    ],
+    "entityDefs": [
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": true,
+                    "isOptional": false,
+                    "isUnique": true,
+                    "name": "file_name_pattern",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": true,
+                    "isOptional": false,
+                    "isUnique": true,
+                    "name": "directory",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "frequency",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "user",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "group",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "permission",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "format",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "server",
+                    "typeName": "server",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "col_schema",
+                    "typeName": "array<schema_col>",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "ENTITY",
+            "createTime": 1587855764311,
+            "createdBy": "admin",
+            "description": "a type definition for a file which contains data, this could a file that needs to be processed or it can be an output (ex: extracts)",
+            "guid": "d85c5d18-2b46-43d8-85ca-2f33c1defe32",
+            "name": "DataFile",
+            "relationshipAttributeDefs": [
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "schema",
+                    "relationshipTypeName": "avro_schema_associatedEntities",
+                    "typeName": "array<avro_schema>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "inputToProcesses",
+                    "relationshipTypeName": "dataset_process_inputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "meanings",
+                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
+                    "typeName": "array<AtlasGlossaryTerm>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "outputFromProcesses",
+                    "relationshipTypeName": "process_dataset_outputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                }
+            ],
+            "subTypes": [],
+            "superTypes": [
+                "DataSet"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1587855764311,
+            "updatedBy": "admin",
+            "version": 1
+        }
+    ],
+    "enumDefs": [],
+    "relationshipDefs": [],
+    "structDefs": [
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "col",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "data_type",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "required",
+                    "typeName": "boolean",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                }
+            ],
+            "category": "STRUCT",
+            "createTime": 1587855764281,
+            "createdBy": "admin",
+            "description": "column definition for schema",
+            "guid": "91a15a9b-9d55-45fe-acb9-de710633efa0",
+            "name": "schema_col",
+            "typeVersion": "1.0",
+            "updateTime": 1587855764281,
+            "updatedBy": "admin",
+            "version": 1
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "classificationDefs": [],
+    "entityDefs": [
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "col",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": false,
+                    "isUnique": false,
+                    "name": "data_type",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "required",
+                    "typeName": "boolean",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "ENTITY",
+            "createTime": 1587855854902,
+            "createdBy": "admin",
+            "description": "schema for kafka value message, simple non-nested",
+            "guid": "18457b76-fb1a-4f3f-9733-e6c8eab9507f",
+            "name": "kafka_value_message_schema",
+            "relationshipAttributeDefs": [
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "schema",
+                    "relationshipTypeName": "avro_schema_associatedEntities",
+                    "typeName": "array<avro_schema>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "inputToProcesses",
+                    "relationshipTypeName": "dataset_process_inputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "meanings",
+                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
+                    "typeName": "array<AtlasGlossaryTerm>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "outputFromProcesses",
+                    "relationshipTypeName": "process_dataset_outputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                }
+            ],
+            "subTypes": [],
+            "superTypes": [
+                "DataSet"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1587855854902,
+            "updatedBy": "admin",
+            "version": 1
+        },
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "key_schema",
+                    "typeName": "array<kafka_value_message_schema>",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "value_schema",
+                    "typeName": "array<kafka_value_message_schema>",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "ENTITY",
+            "createTime": 1587855854912,
+            "createdBy": "admin",
+            "description": "a type definition for a kafka topic with message schema definition",
+            "guid": "c8703100-dd24-4744-a431-925be61e3d01",
+            "name": "kafka_topic_and_schema",
+            "relationshipAttributeDefs": [
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "schema",
+                    "relationshipTypeName": "avro_schema_associatedEntities",
+                    "typeName": "array<avro_schema>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "inputToProcesses",
+                    "relationshipTypeName": "dataset_process_inputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "meanings",
+                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
+                    "typeName": "array<AtlasGlossaryTerm>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                },
+                {
+                    "cardinality": "LIST",
+                    "includeInNotification": false,
+                    "isIndexable": true,
+                    "isLegacyAttribute": true,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "avroSchema",
+                    "relationshipTypeName": "kafka_topic_avroSchema",
+                    "typeName": "array<avro_type>",
+                    "valuesMaxCount": 2147483647,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "outputFromProcesses",
+                    "relationshipTypeName": "process_dataset_outputs",
+                    "typeName": "array<Process>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                }
+            ],
+            "subTypes": [],
+            "superTypes": [
+                "kafka_topic"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1587855854912,
+            "updatedBy": "admin",
+            "version": 1
+        }
+    ],
+    "enumDefs": [],
+    "relationshipDefs": [],
+    "structDefs": []
+}

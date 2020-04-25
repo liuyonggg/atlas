@@ -1,0 +1,23 @@
+{
+    "guidAssignments": {
+        "-1479037219169": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+        "-1479037219170": "5f4381be-68e5-4e9d-b8b7-e610352f1e9c"
+    },
+    "mutatedEntities": {
+        "CREATE": [
+            {
+                "attributes": {
+                    "dns_name": "pluto",
+                    "ip_address": "10.71.68.93",
+                    "qualifiedName": "landing_zone_server_1@dev"
+                },
+                "guid": "191d15cf-4987-4497-bdf4-eaddb1bc893d",
+                "typeName": "server"
+            },
+            {
+                "guid": "5f4381be-68e5-4e9d-b8b7-e610352f1e9c",
+                "typeName": "storm_node"
+            }
+        ]
+    }
+}

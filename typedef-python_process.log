@@ -1,0 +1,100 @@
+{
+    "classificationDefs": [],
+    "entityDefs": [
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "configuration_file",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": true,
+                    "isOptional": false,
+                    "isUnique": true,
+                    "name": "server",
+                    "typeName": "server",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                },
+                {
+                    "cardinality": "SINGLE",
+                    "includeInNotification": false,
+                    "isIndexable": true,
+                    "isOptional": false,
+                    "isUnique": true,
+                    "name": "run_user",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 1
+                }
+            ],
+            "category": "ENTITY",
+            "createTime": 1587855891369,
+            "createdBy": "admin",
+            "description": "a type definition for python script",
+            "guid": "a330f4e7-0497-41ac-8248-237462d29fbd",
+            "name": "python_script",
+            "relationshipAttributeDefs": [
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": true,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "outputs",
+                    "relationshipTypeName": "process_dataset_outputs",
+                    "typeName": "array<DataSet>",
+                    "valuesMaxCount": 2147483647,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": true,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "inputs",
+                    "relationshipTypeName": "dataset_process_inputs",
+                    "typeName": "array<DataSet>",
+                    "valuesMaxCount": 2147483647,
+                    "valuesMinCount": 0
+                },
+                {
+                    "cardinality": "SET",
+                    "includeInNotification": false,
+                    "isIndexable": false,
+                    "isLegacyAttribute": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "meanings",
+                    "relationshipTypeName": "AtlasGlossarySemanticAssignment",
+                    "typeName": "array<AtlasGlossaryTerm>",
+                    "valuesMaxCount": -1,
+                    "valuesMinCount": -1
+                }
+            ],
+            "subTypes": [],
+            "superTypes": [
+                "Process"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1587855891369,
+            "updatedBy": "admin",
+            "version": 1
+        }
+    ],
+    "enumDefs": [],
+    "relationshipDefs": [],
+    "structDefs": []
+}
