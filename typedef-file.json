@@ -156,7 +156,7 @@
           "isIndexable" : false
         }
        ,{
-          "name" : "schema",
+          "name" : "col_schema",
           "typeName" : "array<schema_col>",
           "isOptional" : true,
           "cardinality" : "SINGLE",

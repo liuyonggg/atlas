@@ -14,8 +14,7 @@
         },
         "inputs": [
           {
-            "guid": "6a9156d1-71ae-4d52-9569-20d28fb8eb7a",
-            "typeName": "DataFile"
+            "guid": "-700", "typeName": "DataFile"
           }
         ],
         "outputs": [
@@ -106,7 +105,22 @@
         "uri": "news:news_from_reuters",
         "name": "news_from_reuters"
       }
+    },
+    "-700": {
+      "guid": "-700",
+      "typeName": "DataFile",
+      "attributes": {
+        "qualifiedName": "news_from_reuters",
+        "uri": "news_from_reuters",
+        "name": "news_from_reuters",
+        "file_name_pattern": "news_from_reuters_DDMMYYY",
+        "directory": "/landingzone/reuters/news",
+        "frequency":"daily",
+        "user":"reuters_webscrapper",
+        "group":"newssource",
+        "format":"csv",
+        "server" : {"guid": -100,"typeName": "server"}
+      }
     }
-
   }
 }
